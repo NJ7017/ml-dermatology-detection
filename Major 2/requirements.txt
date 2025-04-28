@@ -11,3 +11,4 @@ matplotlib==3.10.1
 seaborn==0.13.2
 transformers==4.51.3
 scikit-learn==1.6.1
+gunicorn
