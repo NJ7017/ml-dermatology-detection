@@ -54,8 +54,8 @@ def predict_disease(image_path, model, class_names, device):
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # 🔹 Paths (UPDATE THESE AS NEEDED)
-MODEL_PATH = "/home/zoro/Desktop/Project/Major 2/VIT_skin_disease.pth"
-CLASS_NAMES_PATH = "/home/zoro/Desktop/Project/Major 2/class_names.json"
+MODEL_PATH = "VIT_skin_disease.pth"
+CLASS_NAMES_PATH = "class_names.json"
 
 # 🔹 Load model and class names
 class_names = load_class_names(CLASS_NAMES_PATH)
