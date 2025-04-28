@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container main-container">
+    <h2>Frequently Asked Questions</h2>
+    
+    <div class="accordion" id="faqAccordion">
+        {% for faq in [
+            ("How accurate is the system?", "Our model achieves approximately 85% accuracy on test datasets, but it should not replace professional medical diagnosis."),
+            ("What types of skin conditions can it detect?", "The system can identify common conditions like melanoma, eczema, fungal infections, and more."),
+            ("Is my data secure?", "All uploaded images are processed temporarily and not stored permanently."),
+            ("Is this service free?", "Yes, this is currently a free research project."),
+            ("Can I use this for diagnosis?", "This is a screening tool only. Always consult a dermatologist for proper diagnosis."),
+            ("What image quality is needed?", "High-quality, well-lit photos with clear focus on the affected area work best.")
+        ] %}
+        <div class="accordion-item">
+            <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq{{ loop.index }}">
+                    {{ faq[0] }}
+                </button>
+            </h3>
+            <div id="faq{{ loop.index }}" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    {{ faq[1] }}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

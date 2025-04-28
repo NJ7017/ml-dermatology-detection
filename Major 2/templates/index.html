@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container main-container">
+    <h2 class="mb-4">Skin Disease Detection</h2>
+    
+    <!-- Upload Form -->
+    <div class="upload-container">
+        <input type="file" id="imageUpload" accept="image/*">
+        <button id="upload-btn" class="btn btn-primary">Choose Image</button>
+        <button id="predict-btn" class="btn btn-success">Predict</button>
+    </div>
+    
+    <!-- Image Preview -->
+    <div id="image-preview" class="mt-3">
+        <img id="uploadedImage" class="preview-image">
+    </div>
+    
+    <!-- Results Display -->
+    <div id="results-container">
+        <h3 class="mt-4">Prediction Results</h3>
+        <div id="predictions" class="predictions-grid"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+{% endblock %}

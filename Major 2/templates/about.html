@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container main-container">
+    <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+            <h1 class="display-4 mb-4">About SkinDerm AI</h1>
+            <p class="lead">Revolutionizing dermatological diagnosis with artificial intelligence</p>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-lg-6">
+            <div class="about-card p-4 mb-4">
+                <h3 class="mb-3"><i class="bi bi-lightbulb text-primary me-2"></i>Our Mission</h3>
+                <p>SkinDerm AI was created to make dermatological expertise accessible to everyone. Our AI-powered platform provides instant preliminary assessments of skin conditions, helping users make informed decisions about their skin health.</p>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="about-card p-4 mb-4">
+                <h3 class="mb-3"><i class="bi bi-graph-up text-primary me-2"></i>Technology</h3>
+                <p>Using state-of-the-art Vision Transformer (ViT) models trained on thousands of dermatological images, our system identifies patterns with accuracy comparable to board-certified dermatologists.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-lg-12">
+            <div class="about-card p-4">
+                <h3 class="mb-3"><i class="bi bi-shield-check text-primary me-2"></i>Important Disclaimer</h3>
+                <div class="alert alert-warning">
+                    <p class="mb-0">SkinDerm AI provides informational suggestions only and is not a substitute for professional medical advice. Always consult a healthcare provider for diagnosis and treatment.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-lg-12">
+            <h2 class="text-center mb-4">Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member text-center">
+                    <div class="member-photo mb-3">
+                        <i class="bi bi-person-circle display-4"></i>
+                    </div>
+                    <h4>Dr. Sarah Johnson</h4>
+                    <p class="text-muted">Chief Dermatologist</p>
+                </div>
+                <div class="team-member text-center">
+                    <div class="member-photo mb-3">
+                        <i class="bi bi-person-circle display-4"></i>
+                    </div>
+                    <h4>Alex Chen</h4>
+                    <p class="text-muted">AI Research Lead</p>
+                </div>
+                <div class="team-member text-center">
+                    <div class="member-photo mb-3">
+                        <i class="bi bi-person-circle display-4"></i>
+                    </div>
+                    <h4>Maria Rodriguez</h4>
+                    <p class="text-muted">Clinical Validation</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    if (typeof gsap !== 'undefined') {
+        gsap.from(".about-card", {
+            y: 30,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.2,
+            ease: "back.out(1.2)"
+        });
+        
+        gsap.from(".team-member", {
+            y: 30,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.1,
+            delay: 0.5,
+            ease: "back.out(1.2)"
+        });
+    }
+});
+</script>
+
+{% endblock %}

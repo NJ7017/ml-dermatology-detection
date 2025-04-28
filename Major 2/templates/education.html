@@ -1,0 +1,159 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container main-container">
+    <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+            <h1 class="display-4 mb-4">Skin Health Education</h1>
+            <p class="lead">Learn about common skin conditions and proper skin care</p>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-lg-12">
+            <div class="education-tabs">
+                <ul class="nav nav-tabs" id="educationTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="common-tab" data-bs-toggle="tab" data-bs-target="#common" type="button">Common Conditions</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="prevention-tab" data-bs-toggle="tab" data-bs-target="#prevention" type="button">Prevention</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="treatment-tab" data-bs-toggle="tab" data-bs-target="#treatment" type="button">Treatment</button>
+                    </li>
+                </ul>
+                <div class="tab-content p-4" id="educationTabsContent">
+                    <div class="tab-pane fade show active" id="common" role="tabpanel">
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="condition-card">
+                                    <h4><i class="bi bi-droplet-fill text-danger me-2"></i>Acne</h4>
+                                    <p>Common skin condition when hair follicles become clogged with oil and dead skin cells.</p>
+                                    <div class="symptoms">
+                                        <h5>Symptoms:</h5>
+                                        <ul>
+                                            <li>Whiteheads</li>
+                                            <li>Blackheads</li>
+                                            <li>Pimples</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="condition-card">
+                                    <h4><i class="bi bi-circle-fill text-warning me-2"></i>Eczema</h4>
+                                    <p>Condition that makes skin red and itchy. Common in children but can occur at any age.</p>
+                                    <div class="symptoms">
+                                        <h5>Symptoms:</h5>
+                                        <ul>
+                                            <li>Dry, sensitive skin</li>
+                                            <li>Red, inflamed skin</li>
+                                            <li>Severe itching</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="condition-card">
+                                    <h4><i class="bi bi-sun-fill text-warning me-2"></i>Melanoma</h4>
+                                    <p>The most serious type of skin cancer that develops in melanocytes.</p>
+                                    <div class="symptoms">
+                                        <h5>Warning Signs (ABCDE):</h5>
+                                        <ul>
+                                            <li>Asymmetrical shape</li>
+                                            <li>Border irregularity</li>
+                                            <li>Color changes</li>
+                                            <li>Diameter >6mm</li>
+                                            <li>Evolving</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="condition-card">
+                                    <h4><i class="bi bi-bandaid-fill text-primary me-2"></i>Psoriasis</h4>
+                                    <p>Chronic autoimmune condition that causes rapid skin cell buildup.</p>
+                                    <div class="symptoms">
+                                        <h5>Symptoms:</h5>
+                                        <ul>
+                                            <li>Red patches with silvery scales</li>
+                                            <li>Dry, cracked skin</li>
+                                            <li>Itching or burning</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="prevention" role="tabpanel">
+                        <div class="prevention-tips">
+                            <div class="tip-card">
+                                <h4><i class="bi bi-sun me-2"></i>Sun Protection</h4>
+                                <ul>
+                                    <li>Use broad-spectrum SPF 30+ sunscreen daily</li>
+                                    <li>Seek shade between 10am-4pm</li>
+                                    <li>Wear protective clothing and hats</li>
+                                </ul>
+                            </div>
+                            <div class="tip-card">
+                                <h4><i class="bi bi-droplet me-2"></i>Skin Care Basics</h4>
+                                <ul>
+                                    <li>Gentle cleansing twice daily</li>
+                                    <li>Moisturize immediately after bathing</li>
+                                    <li>Avoid harsh scrubs and hot water</li>
+                                </ul>
+                            </div>
+                            <div class="tip-card">
+                                <h4><i class="bi bi-activity me-2"></i>Healthy Lifestyle</h4>
+                                <ul>
+                                    <li>Stay hydrated</li>
+                                    <li>Eat antioxidant-rich foods</li>
+                                    <li>Manage stress levels</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="treatment" role="tabpanel">
+                        <div class="alert alert-info">
+                            <p><strong>Important:</strong> Always consult a dermatologist for proper diagnosis and treatment plans.</p>
+                        </div>
+                        <div class="treatment-options">
+                            <div class="option-card">
+                                <h4>Topical Treatments</h4>
+                                <p>Creams, ointments, and lotions applied directly to the skin.</p>
+                                <p><strong>Examples:</strong> Retinoids, corticosteroids, antibiotics</p>
+                            </div>
+                            <div class="option-card">
+                                <h4>Oral Medications</h4>
+                                <p>Prescription drugs for more severe cases.</p>
+                                <p><strong>Examples:</strong> Antibiotics, retinoids, biologics</p>
+                            </div>
+                            <div class="option-card">
+                                <h4>Light Therapy</h4>
+                                <p>Controlled exposure to ultraviolet light under medical supervision.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    if (typeof gsap !== 'undefined') {
+        gsap.from(".condition-card, .tip-card, .option-card", {
+            y: 30,
+            opacity: 0,
+            duration: 0.6,
+            stagger: 0.1,
+            ease: "back.out(1.2)"
+        });
+    }
+});
+</script>
+{% endblock %}
